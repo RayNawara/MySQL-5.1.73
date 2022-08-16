@@ -1,0 +1,11 @@
+services:
+- type: pserv
+  name: MBA-Legacy-MySQL
+  plan: starter
+  env: docker
+  disk:
+    name: mysql
+    mountPath: /var/lib/mysql
+    sizeGB: 10
+  envVars:
+  - fromGroup: MBA Staging
