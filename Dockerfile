@@ -6,4 +6,6 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3306
 
+RUN mysqld --datadir=/var/lib/mysql --user=mysql
+
 CMD ["mysqld", "--datadir=/var/lib/mysql", "--user=mysql"]
